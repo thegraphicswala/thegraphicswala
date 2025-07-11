@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Graphics Wala</title>
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --background: #000000;
+      --text: #ffffff;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background-color: var(--background);
+      color: var(--text);
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+    .tagline {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .service {
+      background-color: #111;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid var(--primary);
+    }
+    .service h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .contact {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .contact p {
+      margin: 10px 0;
+    }
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">The Graphics Wala</div>
+    <div class="tagline">Graphic Design | Photo & Video Editing</div>
+  </header>  <section class="services">
+    <div class="service">
+      <h3>Logo Design</h3>
+      <p>Custom professional logos for your brand.</p>
+      <button onclick="selectService('Logo Design')">Select</button>
+    </div>
+    <div class="service">
+      <h3>Social Media Post</h3>
+      <p>Eye-catching posts for Instagram, Facebook, etc.</p>
+      <button onclick="selectService('Social Media Post')">Select</button>
+    </div>
+    <div class="service">
+      <h3>Photo Editing</h3>
+      <p>Professional photo retouching and manipulation.</p>
+      <button onclick="selectService('Photo Editing')">Select</button>
+    </div>
+    <div class="service">
+      <h3>Video Editing</h3>
+      <p>Reels, promotional videos, and more.</p>
+      <button onclick="selectService('Video Editing')">Select</button>
+    </div>
+  </section>  <div class="contact">
+    <h2>Contact Us</h2>
+    <p>📞 WhatsApp: <a href="https://wa.me/919712429094" style="color: var(--primary);">9712429094</a></p>
+    <p>📧 Email: <a href="mailto:ap2311211@gmail.com" style="color: var(--primary);">ap2311211@gmail.com</a></p>
+    <p>📸 Instagram: <a href="https://instagram.com/thegraphicswala_" style="color: var(--primary);">@thegraphicswala_</a></p>
+  </div>  <footer>
+    &copy; 2025 The Graphics Wala. All rights reserved.
+  </footer>  <script>
+    function selectService(serviceName) {
+      const email = 'ap2311211@gmail.com';
+      const subject = encodeURIComponent('Service Request: ' + serviceName);
+      const body = encodeURIComponent('Hello, I am interested in your service: ' + serviceName + '. Please contact me.');
+      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+
+      // OPTIONAL: Here you can integrate backend code to send WhatsApp message and generate bill
+      alert('Service selected: ' + serviceName + '\nEmail will be sent.\nBilling on WhatsApp coming soon.');
+    }
+  </script></body>
+</html>
